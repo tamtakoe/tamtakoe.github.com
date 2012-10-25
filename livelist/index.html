@@ -14,7 +14,7 @@
 				$('#cont').livelist(template, data).sortable({axis: 'y', items:'.sortable'});
 
 				$('#save').on('click', function(){
-				  $('#cont').livelist().data().livelist.save()
+					alert($('#cont').livelist().data().livelist.save())
 				})
 			});
 		</script>
