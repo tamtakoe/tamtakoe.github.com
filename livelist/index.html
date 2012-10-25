@@ -10,11 +10,11 @@
 		<script>
 			$(document).ready(function() {
 				var template = '<div><input type="text" class="linegen"></input><a href="#" class="close">×</a></div>'
-				var data = [{description:'ля-ля', sortable:false, deletable:false},{description:'э'}]
+				var data = [{description:'8 (812) 123-12-12', sortable:false, deletable:false},{description:'+7 921 123-45-67'}]
 				$('#cont').livelist(template, data).sortable({axis: 'y', items:'.sortable'});
 
 				$('#save').on('click', function(){
-				  $('#cont').livelist().data().livelist.save()
+					alert($('#cont').livelist().data().livelist.save())
 				})
 			});
 		</script>
