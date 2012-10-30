@@ -9,7 +9,7 @@
 	<body>
 		<script>
 			$(document).ready(function() {
-				var template = '<div><input type="text" class="linegen"></input><a href="#" class="close">×</a></div>'
+				var template = '<div><input type="text" class="linegen" placeholder="Еще один номер"></input><a href="#" class="close">×</a></div>'
 				var data = [{description:'8 (812) 123-12-12', sortable:false, deletable:false},{description:'+7 921 123-45-67'}]
 				$('#cont').livelist(template, data).sortable({axis: 'y', items:'.sortable'});
 
@@ -19,6 +19,7 @@
 			});
 		</script>
 		<h1>Образец</h1>
+		<p>Добавление нескольких телефонных номеров. Поле ввода первого номера показывается всегда<p>
 		<div id="cont"></div>
 		<button id="save">Save</button>
 	</body>
