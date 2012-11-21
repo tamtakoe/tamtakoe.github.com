@@ -4,24 +4,26 @@
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js"></script>
-	<script src="https://raw.github.com/tamtakoe/livelist/master/js/livelist.js"></script>	
+	<!--<script src="https://raw.github.com/tamtakoe/livelist/master/js/livelist.js"></script>-->
+	<script src="../../livelist/js/livelist.js"></script>	
 	</head>
 	<body>
 		<script>
 			$(document).ready(function() {
-				var data = [{description:'8 (812) 123-12-12', sortable:false, deletable:false},{description:'+7 921 123-45-67'}]
-				$('#cont').livelist(data).sortable({axis: 'y', items:'.sortable'});
+				var data = [{description:'Адрес 1', sortable:false, deletable:false, editable:false}, {description:'Адрес 2', flag:'off'}]
+				$("#cont").livelist(data).sortable({axis: 'y', items:'.sortable'});
 
 				$('#save').on('click', function(){
-					alert($('#cont').livelist().data().livelist.save())
+				  alert($('#cont').livelist().data().livelist.save())
 				})
 			});
 		</script>
 		<h1>Образец</h1>
-		<p>Добавление нескольких телефонных номеров. Поле ввода первого номера показывается всегда<p>
+		<p>Добавление нескольких адресов. Первый адрес показан всегда
 		<div id="cont">
 			<div>
-				<input type="text" class="linegen" placeholder="Еще один номер"></input>
+				<input type="checkbox" class="flag" data-ll="flag">
+				<input type="text" class="linegen" data-ll="description"></input>
 				<a href="#" class="close">×</a>
 			</div>
 		</div>
