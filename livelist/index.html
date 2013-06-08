@@ -9,7 +9,7 @@
 	<body>
 		<script>
 			$(document).ready(function() {
-				var data = [{description:'Адрес 1', sortable:false, deletable:false, editable:false}, {description:'Адрес 2', flag:'off'}]
+				var data = [{description:'address 1', sortable:false, deletable:false, editable:false}, {description:'address 2', flag:'off'}]
 				$("#cont").livelist(data).sortable({axis: 'y', items:'.sortable'});
 
 				$('#save').on('click', function(){
@@ -17,8 +17,8 @@
 				})
 			});
 		</script>
-		<h1>Образец</h1>
-		<p>Добавление нескольких адресов. Первый адрес показан всегда
+		<h1>Example</h1>
+		<p>Add new address
 		<div id="cont">
 			<div>
 				<input type="checkbox" class="flag" data-ll="flag">
